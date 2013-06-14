@@ -18,7 +18,7 @@ Usage:
     // Explicit declaration of max. pages:
     scriptNode.getParameters().put("maxPageCount", 42);
 	
-PDFPreview.groovy
+PDFReorder.groovy
 -----------------
 
 Change the order of pages in a given PDF document.
