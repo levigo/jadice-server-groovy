@@ -17,7 +17,7 @@ Usage:
 
     // Explicit declaration of max. pages:
     scriptNode.getParameters().put("maxPageCount", 42);
-	
+    
 PDFReorder.groovy
 -----------------
 
@@ -29,7 +29,22 @@ Usage
     scriptNode.setScript(new URI("resource:/<PathTo>/PDFReorder.groovy"));
 
     // Declaration of new order:
-	List<Integer> newOrder = new ArrayList<Integer>();
-	// ... add the desired values (zero-based)
+    List<Integer> newOrder = new ArrayList<Integer>();
+    // ... add the desired values (zero-based)
     scriptNode.getParameters().put("newOrder", newOrder);
-	
+    
+SendMail.groovy
+---------------
+
+Send documents via mail
+
+Usage
+
+    final ScriptNode scriptNode = new ScriptNode();
+    scriptNode.setScript(new URI("resource:/<PathTo>/SendMail.groovy"));
+
+    // Provide hostname, credentials and the recipient
+    scriptNode.getParameters().put("host", SERVER);
+    scriptNode.getParameters().put("username", LOGIN);
+    scriptNode.getParameters().put("password", PASSWORD);
+    scriptNode.getParameters().put("to", "john.doe@example.com");
