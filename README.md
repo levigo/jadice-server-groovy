@@ -23,7 +23,7 @@ PDFReorder.groovy
 
 Change the order of pages in a given PDF document.
 
-Usage
+Usage:
 
     final ScriptNode scriptNode = new ScriptNode();
     scriptNode.setScript(new URI("resource:/<PathTo>/PDFReorder.groovy"));
@@ -38,7 +38,7 @@ SendMail.groovy
 
 Send documents via mail
 
-Usage
+Usage:
 
     final ScriptNode scriptNode = new ScriptNode();
     scriptNode.setScript(new URI("resource:/<PathTo>/SendMail.groovy"));
@@ -48,3 +48,5 @@ Usage
     scriptNode.getParameters().put("username", LOGIN);
     scriptNode.getParameters().put("password", PASSWORD);
     scriptNode.getParameters().put("to", "john.doe@example.com");
+
+You can find an additional howto article in our jadice knowledge base at https://levigo.de/info/display/JKB/Senden+einer+E-Mail (german)
