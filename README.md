@@ -5,6 +5,27 @@ This repository contains misc. useful groovy scripts for [levigo](http://www.lev
 
 Feel free to use them, modify them or send us a pull request.
 
+CountAnnotations.groovy
+-----------------------
+
+Count how many annotations were found in the given documents and store it in the ```StreamDescriptor``` of the outgoing stream (a stream with only dummy content!)
+
+Works on jadice server 5.1.3.0 and above
+
+Usage:
+
+    final ScriptNode scriptNode = new ScriptNode();
+    scriptNode.setScript(new URI("resource:/<PathTo>/CountAnnotations.groovy"));
+    // Create a jadice server job and submit a document
+    
+    // After the job has finished successfully:
+    for (Stream s : myStreamOutputNode.getStreamBundle()) {
+      final int pageCount = (int) s.getDescriptor().getProperties().get("page-count");
+      final int[] annotationCount = (int[]) s.getDescriptor().getProperties().get("annotation-count");
+      // ...
+    }
+
+
 PDFPreview.groovy
 -----------------
 
