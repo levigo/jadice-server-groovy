@@ -49,7 +49,7 @@ Usage:
     scriptNode.setScript(new URI("resource:/<PathTo>/PDFReorder.groovy"));
 
     // Declaration of new order:
-    List<Integer> newOrder = new ArrayList<Integer>();
+    final ArrayList<Integer> newOrder = new ArrayList<Integer>();
     // ... add the desired values (zero-based)
     scriptNode.getParameters().put("newOrder", newOrder);
     
