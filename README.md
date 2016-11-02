@@ -25,6 +25,19 @@ Usage:
       // ...
     }
 
+PDFPageLabels.groovy
+--------------------
+
+Changes the page labels of a given PDF document
+
+Usage:
+
+    final ScriptNode scriptNode = new ScriptNode();
+    scriptNode.setScript(new URI("resource:/<PathTo>/PDFPageLabels.groovy"));
+    script.getParameters().put("prefix", "Appendix ");
+    script.getParameters().put("style", "roman_upper");
+
+In this example the pages will be labeled with "Appendix I", "Appendix II" and so on.
 
 PDFPreview.groovy
 -----------------
