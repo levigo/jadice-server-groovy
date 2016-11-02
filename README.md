@@ -39,26 +39,6 @@ Usage:
     // Explicit declaration of max. pages:
     scriptNode.getParameters().put("maxPageCount", 42);
 
-PDFProperties.groovy
---------------------
-
-Modifies the properties of a given PDF document
-
-Usage:
-
-    final ScriptNode scriptNode = new ScriptNode();
-    scriptNode.setScript(new URI("resource:/<PathTo>/PDFProperties.groovy"));
-    
-    // Declaration of the properties to modify (null in order to clear a property):
-    final HashMap<String, String> info = new HashMap<String, String>();
-    info.put("Title", "Hello World");
-    info.put("Subject", "I'm an example document");
-    info.put("Keywords", "example, groovy, jadice server");
-    info.put("Creator", null);
-    info.put("Author", "John Doe");
-    scriptNode.getParameters().put("pdfProperties", info);
-
-
 PDFReorder.groovy
 -----------------
 
