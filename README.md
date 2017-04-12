@@ -5,7 +5,7 @@ This repository contains misc. useful groovy scripts for [levigo](http://www.lev
 
 Feel free to use them, modify them or send us a pull request.
 
-CountAnnotations.groovy
+[CountAnnotations.groovy](src/main/groovy/CountAnnotations.groovy)
 -----------------------
 
 Count how many annotations were found in the given documents and store it in the ```StreamDescriptor``` of the outgoing stream (a stream with only dummy content!)
@@ -25,7 +25,7 @@ Usage:
       // ...
     }
 
-PDFPageLabels.groovy
+[PDFPageLabels.groovy](src/main/groovy/PDFPageLabels.groovy)
 --------------------
 
 Changes the page labels of a given PDF document
@@ -39,7 +39,7 @@ Usage:
 
 In this example the pages will be labeled with "Appendix I", "Appendix II" and so on.
 
-PDFPreview.groovy
+[PDFPreview.groovy](src/main/groovy/PDFPreview.groovy)
 -----------------
 
 Modifies a given PDF document so that only the first `n` pages remain in the resulting document
@@ -52,7 +52,7 @@ Usage:
     // Explicit declaration of max. pages:
     scriptNode.getParameters().put("maxPageCount", 42);
 
-PDFReorder.groovy
+[PDFReorder.groovy](src/main/groovy/PDFReorder.groovy)
 -----------------
 
 Change the order of pages in a given PDF document.
@@ -67,7 +67,7 @@ Usage:
     // ... add the desired values (zero-based)
     scriptNode.getParameters().put("newOrder", newOrder);
     
-SendMail.groovy
+[SendMail.groovy](src/main/groovy/SendMail.groovy)
 ---------------
 
 Send documents via mail
